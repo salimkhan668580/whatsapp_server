@@ -1,6 +1,10 @@
-const Conversation =require("../models/conversation.js");
+// const Conversation =require("../models/conversation.js");
 
-const Message = require("../models/Message.js");
+const Conversation =require("../Models/conversation.js");
+
+// const Message = require("../models/Message.js");
+ const Message = require("../Models/Message.js");
+
 
  const sendMessage = async (req, res) => {
   try {
