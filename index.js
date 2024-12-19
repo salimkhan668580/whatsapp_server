@@ -17,7 +17,8 @@ const io = createSocketServer(server);
 app.use(cookieParser());
   // Enable cookieParser to parse cookies from requests
 app.use(cors({
-  origin: 'http://localhost:5173',
+  // origin: 'http://localhost:5173',
+  origin: 'https://whatsapp-server-z1tt.onrender.com',
   credentials: true,  // Enable sending cookies over the secure connection
   methods: ['GET', 'POST', 'PUT', 'DELETE']  // Specify allowed HTTP methods for CORS
   
