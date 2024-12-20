@@ -1,6 +1,6 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
-const createTokenAndSaveCookie = (userId, res) => {
+// const createTokenAndSaveCookie = (userId, res) => {
   // const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
   //   expiresIn: "10d",
   // });
@@ -12,8 +12,13 @@ const createTokenAndSaveCookie = (userId, res) => {
   //   sameSite: "strict", // csrf
   // });
 
+// };
+// module.exports= createTokenAndSaveCookie;
 
-    const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
+const jwt = require('jsonwebtoken');
+
+const createTokenAndSaveCookie = (userId, res) => {
+  const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
     expiresIn: "10d", // Token validity for 10 days
   });
 
@@ -25,5 +30,4 @@ const createTokenAndSaveCookie = (userId, res) => {
   });
 };
 
-};
-module.exports= createTokenAndSaveCookie;
+module.exports = createTokenAndSaveCookie;
