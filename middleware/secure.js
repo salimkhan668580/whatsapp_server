@@ -23,6 +23,7 @@ const secureRoute = async (req, res, next) => {
     next();
   } catch (error) {
     console.log("Error in secureRoute: ", error);
+    
     res.status(500).json({ error: "Internal server error" });
   }
 };

@@ -19,8 +19,8 @@ app.use(cookieParser());
 app.use(cors({
   origin: ['http://localhost:5173', 'https://salimchat.netlify.app'],
   sameSite: "lax",
-  domain: "https://salimchat.netlify.app",
-  credentials: true,  
+  credentials: true, 
+  
   methods: ['GET', 'POST', 'PUT', 'DELETE']  
   
 }));
@@ -32,6 +32,8 @@ app.use(express.json())
 app.use("/user", userRouter)
 app.use("/message",messageRouter )
 app.get('/', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://salimchat.netlify.app');
+  res.header('Access-Control-Allow-Credentials', 'true');
   res.send('Hello World!')
 })
 
