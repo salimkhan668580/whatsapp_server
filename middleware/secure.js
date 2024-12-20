@@ -7,7 +7,7 @@ const secureRoute = async (req, res, next) => {
   
   try {
     const token = req.cookies.jwt;
-    console.log("token",req.cookies);
+    console.log("token sdfs",req.cookies.jwt);
     if (!token) {
       return res.status(401).json({ error: "No token, authorization denied" });
     }

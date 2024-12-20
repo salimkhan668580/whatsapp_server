@@ -17,7 +17,7 @@ const io = createSocketServer(server);
 app.use(cookieParser());
   // Enable cookieParser to parse cookies from requests
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://salimchat.netlify.app'],
+  origin: "*",
   sameSite: "lax",
   credentials: true, 
   

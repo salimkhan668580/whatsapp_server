@@ -9,7 +9,7 @@ router.post("/signup", signup)
 
 router.post("/login", login)
 router.post("/logout",logout)
-router.get("/allusers",allUsers);
-// router.get("/allusers", secureRoute, allUsers);
+
+router.get("/allusers", secureRoute, allUsers);
 
 module.exports = router;
