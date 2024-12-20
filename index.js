@@ -17,7 +17,7 @@ const io = createSocketServer(server);
 app.use(cookieParser());
   // Enable cookieParser to parse cookies from requests
 app.use(cors({
-  origin: "https://whatsapp-client-8x7d.onrender.com/",
+  origin: "https://whatsapp-client-8x7d.onrender.com",
   sameSite: "lax",
   credentials: true, 
   
