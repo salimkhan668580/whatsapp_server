@@ -32,8 +32,6 @@ app.use(express.json())
 app.use("/user", userRouter)
 app.use("/message",messageRouter )
 app.get('/', (req, res) => {
-  res.header('Access-Control-Allow-Origin', 'https://salimchat.netlify.app');
-  res.header('Access-Control-Allow-Credentials', 'true');
   res.send('Hello World!')
 })
 
