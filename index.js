@@ -17,7 +17,7 @@ const io = createSocketServer(server);
 app.use(cookieParser());
   // Enable cookieParser to parse cookies from requests
 app.use(cors({
-  origin: "*",
+  origin: "https://whatsapp-client-8x7d.onrender.com/",
   sameSite: "lax",
   credentials: true, 
   
@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }))  // Enable bodyParser for handli
 app.use(express.json())
 app.use("/user", userRouter)
 app.use("/message",messageRouter )
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.send('Hello World!')
 })
 
