@@ -18,7 +18,8 @@ app.use(cookieParser());
   // Enable cookieParser to parse cookies from requests
 app.use(cors({
   origin: ['http://localhost:5173', 'https://salimchat.netlify.app'],
-
+  sameSite: "lax",
+  domain: "https://salimchat.netlify.app",
   credentials: true,  
   methods: ['GET', 'POST', 'PUT', 'DELETE']  
   
