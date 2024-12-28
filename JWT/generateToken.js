@@ -6,11 +6,10 @@ const createTokenAndSaveCookie = (userId, res) => {
     expiresIn: "10d",
   });
   res.cookie("jwt", token, {
-    httpOnly: true, // xss
-    // secure: true,
-    credentials: true,
-    secure: false, 
-    sameSite: "strict", // csrf
+    httpOnly: true,
+    secure: true, // HTTPS ke liye
+    sameSite: 'None', // Cross-origin ke liye zaroori
+    maxAge: 24 * 60 * 60 * 1000, // 1 day
   });
 
 };

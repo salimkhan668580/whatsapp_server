@@ -20,7 +20,6 @@ app.use(cors({
   origin: ["https://salimchat.netlify.app","http://localhost:5173"],
   sameSite: "lax",
   credentials: true, 
-  
   methods: ['GET', 'POST', 'PUT', 'DELETE']  
   
 }));
@@ -29,6 +28,8 @@ app.use(cors({
 app.use(express.urlencoded({ extended: true }))  // Enable bodyParser for handling form data
 
 app.use(express.json())
+app.use(cookieParser());
+
 app.use("/user", userRouter)
 app.use("/message",messageRouter )
 app.get('/home', (req, res) => {
