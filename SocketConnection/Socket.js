@@ -8,6 +8,8 @@ const createSocketServer = (server) => {
       credentials: true,
       methods: ["GET", "POST", "PUT", "DELETE"],
     },
+
+
   });
 
   io.on("connection", (socket) => {
